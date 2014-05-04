@@ -1,0 +1,37 @@
+extends layout
+ 
+block content
+  h1 eCommerce Shopping WebSite
+    
+  div#paypal
+      p
+        This Demonstration of Paypal Express Checkout integration:
+          ul
+            li Display Checkout with Paypal Button on Seller Web Site
+            li Submit Checkout with PayPal total amount in shopping cart and description 
+            li Automatic Redirect with Merchant Credentials (Client ID and Secret) to PayPal Sandbox - api.sandbox.paypal.com
+            li Authenitcate Buyer Sandbox account: Email - sanboxbuyer@paypal.com  Password - paypalexpress!
+            li If Confirm Payment - Display Confirmation on Seller Website
+            li If Cancel Payment - Display Cancellation on Seller Website
+            
+      p
+        b Shopping Cart on Seller Website
+        br
+        please Please enter desired amount and description. Then click Checkout with Paypal Button.
+        
+      p
+      form(action="/create")
+        input(type='hidden', id='currency', maxlength='3',
+              name='currency', placeholder='USD', value='USD')
+        input(type='hidden', name='method', value='paypal')
+        label(for='amount') Total Amount(USD):
+        input(type='text', id='amount', name='amount', required)
+        br
+        label(for='description') Description:
+        input(type='text', id='description', name='description',
+              placeholder='Shopping, Shoes, Books')
+        br
+        br
+        input(type='image',src='https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif', onclick='submit')
+
+
