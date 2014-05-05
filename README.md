@@ -2,9 +2,10 @@ PayPal-express-checkout-with-nodejs-express
 ===========================================
 
 This code demonstatres that buyer can click PayPal Express Checkout button on Seller website, process payment via PayPal and return to Seller website with acknowledgement.
-
-Package.json : Contains information about packages used  such as express, jade, PayPal SDK	
+<br/><br/>
+Package.json : Contains information about packages used  such as express, jade, PayPal SDK
 <br/>Config.jason :Contains parameters such as port, ip address,  PayPal security, PayPal client_id
+<br/>
 <br/>App.js  : App.js is main files that creates server and routes requests
 <br/>Routes.js : Route.js holds details logic for following main paths
 <br/>  -> Route 1: Entry page to accept amount and submit using paypal express checkout button
