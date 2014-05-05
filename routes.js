@@ -28,8 +28,8 @@ exports.create = function (req, res) {
   if (method === 'paypal') {
     payment.payer.payment_method = 'paypal';
     payment.redirect_urls = {
-      "return_url": "http://localhost:5000/execute",
-      "cancel_url": "http://localhost:5000/cancel"
+      "return_url": "http://"+config.ipaddress+":"+ config.port+"/execute",
+      "cancel_url": "http://"+config.ipaddress+":"+ config.port+"/cancel"
     };
   } else if (method === 'credit_card') {
     var funding_instruments = [
